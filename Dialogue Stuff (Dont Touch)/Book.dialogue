@@ -1,18 +1,68 @@
 ~ start
 Book: A new day has started. 
 %19 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
-% Book: You had to stay at home because of a storm.
-
+% 
+	Book: You had to stay at home because of a storm.
+	=> END
 - hunting expedition
 	Book: You found a mammoth
-	=> mammoth
+	
+	- Chase it
+		%3 Book: You got 20 Meat and 10 leather.
+		%3 Book: You took 10 Damage, 10 leather and 20 Meat.
+		% Book: You took 10 Damage and the mammoth ran away.
+		
+	- Dont chase it
+		Book: It ran away.
+		Book: You found nothing and returned home.
 
-~ mammoth
-- Chase it
-	%3 Book: You got 20 Meat.
-	%3 Book: You took 10 Damage and 20 Meat.
-	% Book: You took 10 Damage and the mamoth ran away.
-- Dont chase it
-	Book: It ran away.
-	%Book: You found nothing and returned home.
+
+
+
+
+- gathering expedition
+	%
+		Book: You found berries.
+		=> berries
+	%
+		Book: You found some herbs.
+		=> herbs
+	%
+		Book: You found some sharp stones.
+		=> stones
+	%
+		Book: You found some big leaves. You take them and return home.
+		=> leaves
+	%
+		Book: You didn't find anything and went back home empty-handed.
+		=> END
+	~ berries
+	- take them
+		%4Book: You took the berries.
+		%Book: You took the berries, but you got injured in the process. 
+		
+	- let them be
+		Book: You left the berries and venture home.
+	=> END
+	
+	
+	~ herbs
+	- take them
+		%4Book: You took the herbs.
+		%Book: You took the herbs, but you got injured in the process. 
+		
+	- let them be
+		Book: You left the herbs and venture home.
+	=> END
+	
+	
+	~ stones
+	- take them
+		%4Book: You took the stones.
+		%Book: You took the stones, but you got injured in the process. 
+		
+	- let them be
+		Book: You left the stones and venture home.
+	~ leaves
+
 => END
