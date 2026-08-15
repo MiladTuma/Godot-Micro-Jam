@@ -1,23 +1,16 @@
 ~ start
 Book: A new day has started. 
 %19 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
-% Book: You have to stay at home because of a storm.
+% Book: You had to stay at home because of a storm.
 - hunting expedition
-	%3
-		Book: You found a mammoth
-		~ mammoth
-Book: You see a mammoth.
+	Book: You found a mammoth
+	~ mammoth
+=> mammoth
 - Chase it
 	%3 Book: You got 20 Meat.
 	%3 Book: You took 10 Damage and 20 Meat.
 	% Book: You took 10 Damage and the mamoth ran away.
 - Dont chase it
 	Book: It ran away.
-	%Book: You found nothing and return home.
--gathering expedition
-- stay at home
-	Book: Nobody goes out and the day ends.
-
-
-
+	%Book: You found nothing and returned home.
 => END
