@@ -1,3 +1,30 @@
 [gd_scene format=3 uid="uid://fgelynrtbs47"]
 
+[ext_resource type="Texture2D" uid="uid://btses48djt44a" path="res://Assets/Cave.png" id="1_f6udf"]
+[ext_resource type="Texture2D" uid="uid://csg7ywd73thvv" path="res://Assets/Hässlige Fraupng.png" id="2_sblpm"]
+[ext_resource type="Texture2D" uid="uid://cl10gt78rpxoj" path="res://Grrock.png" id="3_3amdw"]
+[ext_resource type="Texture2D" uid="uid://vqa0iqd37w3w" path="res://Assets/Missgeburt.png" id="4_1xcnr"]
+[ext_resource type="Texture2D" uid="uid://2omdjmqjfwlq" path="res://Assets/Mein Beileid.png" id="5_ow1sv"]
+
 [node name="Main" type="Node2D" unique_id=531477345]
+
+[node name="Hintergrund" type="Sprite2D" parent="." unique_id=222327150]
+position = Vector2(575.99994, 323.99994)
+scale = Vector2(0.59999996, 0.59999996)
+texture = ExtResource("1_f6udf")
+
+[node name="Hässlige Frau" type="Sprite2D" parent="." unique_id=776080943]
+position = Vector2(841, 248)
+texture = ExtResource("2_sblpm")
+
+[node name="Titan" type="Sprite2D" parent="." unique_id=1908241048]
+position = Vector2(732, 240)
+texture = ExtResource("3_3amdw")
+
+[node name="Missgeburt" type="Sprite2D" parent="." unique_id=128120928]
+position = Vector2(532, 278)
+texture = ExtResource("4_1xcnr")
+
+[node name="Mein Beileid" type="Sprite2D" parent="." unique_id=492493437]
+position = Vector2(399, 235)
+texture = ExtResource("5_ow1sv")
