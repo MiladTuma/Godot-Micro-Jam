@@ -1,6 +1,6 @@
 ~ start
 Book: A new day has started. 
-%19 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
+% 19 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
 % 
 	Book: You had to stay at home because of a storm.
 	=> END
@@ -8,8 +8,8 @@ Book: A new day has started.
 	Book: You found a mammoth
 	
 	- Chase it
-		%3 Book: You got 20 Meat and 10 leather.
-		%3 Book: You took 10 Damage, 10 leather and 20 Meat.
+		% 3 Book: You got 20 Meat and 10 leather.
+		% 3 Book: You took 10 Damage, 10 leather and 20 Meat.
 		% Book: You took 10 Damage and the mammoth ran away.
 		
 	- Dont chase it
@@ -38,8 +38,8 @@ Book: A new day has started.
 		=> END
 	~ berries
 	- take them
-		%4Book: You took the berries.
-		%Book: You took the berries, but you got injured in the process. 
+		%4 Book: You took the berries.
+		% Book: You took the berries, but you got injured in the process. 
 		
 	- let them be
 		Book: You left the berries and venture home.
@@ -48,8 +48,8 @@ Book: A new day has started.
 	
 	~ herbs
 	- take them
-		%4Book: You took the herbs.
-		%Book: You took the herbs, but you got injured in the process. 
+		%4 Book: You took the herbs.
+		% Book: You took the herbs, but you got injured in the process. 
 		
 	- let them be
 		Book: You left the herbs and venture home.
@@ -58,8 +58,8 @@ Book: A new day has started.
 	
 	~ stones
 	- take them
-		%4Book: You took the stones.
-		%Book: You took the stones, but you got injured in the process. 
+		% 4Book: You took the stones.
+		% Book: You took the stones, but you got injured in the process. 
 		
 	- let them be
 		Book: You left the stones and venture home.
