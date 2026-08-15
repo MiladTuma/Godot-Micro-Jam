@@ -28,6 +28,10 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://Dialogue Stuff (Dont Touch)/Book.dialogue")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
