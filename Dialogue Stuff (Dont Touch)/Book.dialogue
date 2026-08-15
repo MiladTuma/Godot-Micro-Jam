@@ -2,10 +2,12 @@
 Book: A new day has started. 
 %19 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
 % Book: You had to stay at home because of a storm.
+
 - hunting expedition
 	Book: You found a mammoth
-	~ mammoth
-=> mammoth
+	=> mammoth
+
+~ mammoth
 - Chase it
 	%3 Book: You got 20 Meat.
 	%3 Book: You took 10 Damage and 20 Meat.
