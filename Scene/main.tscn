@@ -13,6 +13,17 @@
 [ext_resource type="Script" uid="uid://m61m28jyx0rf" path="res://Scene/boy.gd" id="7_3pt4j"]
 [ext_resource type="Script" uid="uid://6g8dik6gnq" path="res://Scene/girl.gd" id="9_7y4ci"]
 [ext_resource type="Script" uid="uid://c46pxy75271ir" path="res://Scene/next_day.gd" id="13_0sxm5"]
+[ext_resource type="Script" uid="uid://d4m1bfu5qxxlv" path="res://Scene/inventory_ui.gd" id="14_hspdg"]
+[ext_resource type="Script" uid="uid://bmpeapduubs3a" path="res://Components/Inventory.gd" id="15_6njx3"]
+[ext_resource type="Script" uid="uid://cdoiw45k1jh7c" path="res://Scene/label.gd" id="15_j63at"]
+
+[sub_resource type="Resource" id="Resource_j63at"]
+script = ExtResource("15_6njx3")
+metadata/_custom_type_script = "uid://bmpeapduubs3a"
+
+[sub_resource type="Resource" id="Resource_0y2cb"]
+script = ExtResource("15_6njx3")
+metadata/_custom_type_script = "uid://bmpeapduubs3a"
 
 [node name="Main" type="Node2D" unique_id=531477345 node_paths=PackedStringArray("Men", "Woman", "Boy", "Girl")]
 script = ExtResource("1_1xcnr")
@@ -55,10 +66,6 @@ stats = ExtResource("4_0sxm5")
 position = Vector2(532, 278)
 texture = ExtResource("4_1xcnr")
 
-[node name="Missgeburt2" type="Sprite2D" parent="Character/Boy" unique_id=1329359720]
-position = Vector2(532, 278)
-texture = ExtResource("4_1xcnr")
-
 [node name="Girl" type="Node2D" parent="Character" unique_id=824051862]
 script = ExtResource("9_7y4ci")
 stats = ExtResource("4_0sxm5")
@@ -89,5 +96,30 @@ autowrap_mode = 3
 script = ExtResource("13_0sxm5")
 main = NodePath("..")
 
+[node name="Inventory" type="Node2D" parent="." unique_id=514695779]
+
+[node name="Toggle Inventory" type="Button" parent="Inventory" unique_id=810651209]
+offset_right = 271.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 26
+text = "Open Inventory"
+
+[node name="InventoryUi" type="CanvasLayer" parent="Inventory" unique_id=1358867676]
+visible = false
+script = ExtResource("14_hspdg")
+Ressource_data = SubResource("Resource_j63at")
+
+[node name="Label" type="Label" parent="Inventory/InventoryUi" unique_id=211675055]
+offset_left = 1.0
+offset_top = 91.0
+offset_right = 270.0
+offset_bottom = 348.0
+theme_override_font_sizes/font_size = 30
+text = "Ressources:
+"
+script = ExtResource("15_j63at")
+inventory = SubResource("Resource_0y2cb")
+
 [connection signal="button_down" from="Crafting/Craft Spear" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="NextDay" to="NextDay" method="_on_pressed"]
+[connection signal="pressed" from="Inventory/Toggle Inventory" to="Inventory/InventoryUi" method="_on_toggle_inventory_pressed"]
