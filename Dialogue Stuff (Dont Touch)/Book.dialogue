@@ -38,8 +38,8 @@ Book: A new day has started.
 		=> END
 	~ berries
 	- take them
-		%4Book: You took the berries.
-		%Book: You took the berries, but you got injured in the process. 
+		%4 Book: You took the berries.
+		% Book: You took the berries, but you got injured in the process. 
 		
 	- let them be
 		Book: You left the berries and venture home.
@@ -48,8 +48,8 @@ Book: A new day has started.
 	
 	~ herbs
 	- take them
-		%4Book: You took the herbs.
-		%Book: You took the herbs, but you got injured in the process. 
+		%4 Book: You took the herbs.
+		% Book: You took the herbs, but you got injured in the process. 
 		
 	- let them be
 		Book: You left the herbs and venture home.
@@ -58,8 +58,8 @@ Book: A new day has started.
 	
 	~ stones
 	- take them
-		%4Book: You took the stones.
-		%Book: You took the stones, but you got injured in the process. 
+		%4 Book: You took the stones.
+		% Book: You took the stones, but you got injured in the process. 
 		
 	- let them be
 		Book: You left the stones and venture home.
