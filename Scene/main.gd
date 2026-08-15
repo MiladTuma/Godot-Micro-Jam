@@ -75,4 +75,3 @@ func craft_spear():
 
 func _on_button_button_down() -> void:
 	craft_spear()
-	new_day()

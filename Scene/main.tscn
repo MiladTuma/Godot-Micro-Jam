@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://2omdjmqjfwlq" path="res://Assets/Mein Beileid.png" id="5_ow1sv"]
 [ext_resource type="Script" uid="uid://m61m28jyx0rf" path="res://Scene/boy.gd" id="7_3pt4j"]
 [ext_resource type="Script" uid="uid://6g8dik6gnq" path="res://Scene/girl.gd" id="9_7y4ci"]
+[ext_resource type="Script" uid="uid://c46pxy75271ir" path="res://Scene/next_day.gd" id="13_0sxm5"]
 
 [node name="Main" type="Node2D" unique_id=531477345 node_paths=PackedStringArray("Men", "Woman", "Boy", "Girl")]
 script = ExtResource("1_1xcnr")
@@ -70,8 +71,23 @@ texture = ExtResource("5_ow1sv")
 position = Vector2(37, 28)
 
 [node name="Craft Spear" type="Button" parent="Crafting" unique_id=395552000]
-offset_right = 209.0
-offset_bottom = 103.0
+offset_left = -37.0
+offset_top = 517.0
+offset_right = 172.0
+offset_bottom = 620.0
 text = "Craft Spear"
 
+[node name="NextDay" type="Button" parent="." unique_id=1040163772 node_paths=PackedStringArray("main")]
+offset_left = 891.0
+offset_top = 521.0
+offset_right = 1151.9998
+offset_bottom = 648.0
+theme_override_font_sizes/font_size = 30
+text = "Next day
+Day: 0"
+autowrap_mode = 3
+script = ExtResource("13_0sxm5")
+main = NodePath("..")
+
 [connection signal="button_down" from="Crafting/Craft Spear" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="NextDay" to="NextDay" method="_on_pressed"]
