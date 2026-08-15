@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Micro Jam"
+run/main_scene="uid://fgelynrtbs47"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
@@ -29,7 +30,7 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://BookDialogue.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogue Stuff (Dont Touch)/Book.dialogue")
 
 [physics]
 

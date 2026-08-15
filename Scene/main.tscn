@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://fgelynrtbs47"]
 
+[ext_resource type="PackedScene" uid="uid://bacj1bpuhvu4s" path="res://Dialogue Stuff (Dont Touch)/dialogue_manager.tscn" id="1_f6udf"]
+
 [node name="Main" type="Node2D" unique_id=531477345]
+
+[node name="Dialogue Manager" parent="." unique_id=68731123 instance=ExtResource("1_f6udf")]
