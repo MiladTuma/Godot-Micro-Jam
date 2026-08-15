@@ -1,0 +1,15 @@
+~ start
+Book: Welcome to this Book. Where do you want to get?
+- mamooth
+	=> mammoth
+	
+
+~ mammoth
+Book: You see a mammoth walking by the cave.
+- Chase it
+	%3 Book: You got 20 Meat.
+	%3 Book: You took 10 Damage and 20 Meat.
+	% Book: You took 10 Damage and the mamoth ran away.
+- Dont chase it
+	Book: It ran away.
+=> END
