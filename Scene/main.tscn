@@ -21,40 +21,6 @@ Woman = NodePath("Character/Women")
 Boy = NodePath("Character/Boy")
 Girl = NodePath("Character/Girl")
 
-[node name="Character" type="Node2D" parent="." unique_id=39491453]
-
-[node name="Women" type="Node2D" parent="Character" unique_id=17963898]
-script = ExtResource("3_75buv")
-stats = ExtResource("4_0sxm5")
-
-[node name="Hässlige Frau" type="Sprite2D" parent="Character/Women" unique_id=776080943]
-position = Vector2(841, 248)
-texture = ExtResource("2_sblpm")
-
-[node name="Men" type="Node2D" parent="Character" unique_id=1472193720]
-script = ExtResource("5_c2iwn")
-stats = ExtResource("4_0sxm5")
-
-[node name="Titan" type="Sprite2D" parent="Character/Men" unique_id=1908241048]
-position = Vector2(732, 240)
-texture = ExtResource("3_3amdw")
-
-[node name="Boy" type="Node2D" parent="Character" unique_id=907755946]
-script = ExtResource("7_3pt4j")
-stats = ExtResource("4_0sxm5")
-
-[node name="Missgeburt" type="Sprite2D" parent="Character/Boy" unique_id=128120928]
-position = Vector2(532, 278)
-texture = ExtResource("4_1xcnr")
-
-[node name="Girl" type="Node2D" parent="Character" unique_id=824051862]
-script = ExtResource("9_7y4ci")
-stats = ExtResource("4_0sxm5")
-
-[node name="Mein Beileid" type="Sprite2D" parent="Character/Girl" unique_id=492493437]
-position = Vector2(399, 235)
-texture = ExtResource("5_ow1sv")
-
 [node name="Assets" type="Node2D" parent="." unique_id=165086258]
 
 [node name="Hintergrund" type="Sprite2D" parent="Assets" unique_id=222327150]
@@ -85,6 +51,10 @@ script = ExtResource("7_3pt4j")
 stats = ExtResource("4_0sxm5")
 
 [node name="Missgeburt" type="Sprite2D" parent="Character/Boy" unique_id=128120928]
+position = Vector2(532, 278)
+texture = ExtResource("4_1xcnr")
+
+[node name="Missgeburt2" type="Sprite2D" parent="Character/Boy" unique_id=1329359720]
 position = Vector2(532, 278)
 texture = ExtResource("4_1xcnr")
 
