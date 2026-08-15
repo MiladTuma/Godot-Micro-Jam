@@ -1,5 +1,6 @@
 extends Node
 
+@warning_ignore("unused_signal")
 signal inventory_changed
 
 @export var meat : int = 5

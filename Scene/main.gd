@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var label : Label
+
 @export var Men : Node2D
 @export var Woman : Node2D
 @export var Boy : Node2D
@@ -9,7 +11,7 @@ func _ready() -> void:
 	pass
 
 func _process(_delta: float) -> void:
-	pass
+	update_inventory()
 
 func new_day():
 	check_hunger_timer()
@@ -24,6 +26,10 @@ func new_day():
 		Boy.visible = false
 	if Girl.current_hp <= 0:
 		Girl.visible = false
+	
+	var dialogue_resource = load("res://Dialogue Stuff (Dont Touch)/Book.dialogue")
+	DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
+
 
 
 
@@ -75,3 +81,6 @@ func craft_spear():
 
 func _on_button_button_down() -> void:
 	craft_spear()
+
+func update_inventory():
+	label.update_inventory()

@@ -20,9 +20,8 @@
 script = ExtResource("15_6njx3")
 metadata/_custom_type_script = "uid://bmpeapduubs3a"
 
-[node name="Main" type="Node2D" unique_id=531477345 node_paths=PackedStringArray("label", "Men", "Woman", "Boy", "Girl")]
+[node name="Main" type="Node2D" unique_id=531477345 node_paths=PackedStringArray("Men", "Woman", "Boy", "Girl")]
 script = ExtResource("1_1xcnr")
-label = NodePath("Inventory/InventoryUi/Label")
 Men = NodePath("Character/Men")
 Woman = NodePath("Character/Woman")
 Boy = NodePath("Character/Boy")
