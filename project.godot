@@ -18,6 +18,7 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
+Global="*uid://oubhk86ly8t5"
 
 [display]
 

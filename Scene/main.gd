@@ -1,6 +1,5 @@
 extends Node2D
 
-@export var inventory : Inventory
 @export var Men : Node2D
 @export var Woman : Node2D
 @export var Boy : Node2D
@@ -64,12 +63,12 @@ func check_hurt():
 		Girl.current_hp -= Girl.current_damage_amount_hurt
 
 func craft_spear():
-	if inventory.stick >= 2 and inventory.stone >= 1 and inventory.rope >= 1:
-		inventory.spear += 1
-		inventory.stick -= 2
-		inventory.rope -= 1
+	if Global.stick >= 2 and Global.stone >= 1 and Global.rope >= 1:
+		Global.spear += 1
+		Global.stick -= 2
+		Global.rope -= 1
 		
-		inventory.inventory_changed.emit()
+		Global.inventory_changed.emit()
 	else:
 		print("You dont have enough Resources")
 
