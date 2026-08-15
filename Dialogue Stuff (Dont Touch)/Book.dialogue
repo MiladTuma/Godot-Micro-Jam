@@ -2,7 +2,10 @@
 Book: Welcome to this Book. Where do you want to get?
 - mamooth
 	=> mammoth
-	
+- food poisoning
+	=> food_poisoning
+- expedition
+	=> expedition
 
 ~ mammoth
 Book: You see a mammoth walking by the cave.
@@ -12,4 +15,26 @@ Book: You see a mammoth walking by the cave.
 	% Book: You took 10 Damage and the mamoth ran away.
 - Dont chase it
 	Book: It ran away.
+~ food_poisoning
+Book: One of your villagers got food poisoning.
+- Treat him/her
+	%90 Book: The villager has recovered and you used 1 Herb in the process.
+	%9 Book: The treatment was unsuccessful and the villager is incapable. You used 1 Herb in the process.
+	% Book:The treatment was unsuccessful and the villager died anyway. You lost 1 Herb in the process.
+- Let him/her be
+	%45 The villager remains sick and is incapable.
+	%4 The villager died of food poisoning.
+	% The villager regained health without treatment.
+~ expedition
+Book: You get the choice to send somebody on an expedition. Which kind of expedition is to be started?
+- gathering expedition
+	=> gathering
+- hunting expedition
+	=> hunting
+- stay at home
+Book: Nobody goes out and the day ends.
+~ gathering
+Dev: IN DEVELOPMENT!!!
+~ hunting
+Dev: IN DEVELOPMENT!!!
 => END
