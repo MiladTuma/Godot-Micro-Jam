@@ -1,9 +1,12 @@
 ~ start
 Book: A new day has started. 
-% 19 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
 % 
 	Book: You had to stay at home because of a storm.
 	=> END
+% Book: A wolf has come to your cave! REST IN DEVELOPMENT
+	
+% 18 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
+
 - hunting expedition
 	Book: You found a mammoth
 	
