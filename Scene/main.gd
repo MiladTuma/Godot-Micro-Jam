@@ -64,9 +64,10 @@ func check_hurt():
 		Girl.current_hp -= Girl.current_damage_amount_hurt
 
 func craft_spear():
-	if inventory.stick >= 2 and inventory.stone >= 1:
+	if inventory.stick >= 2 and inventory.stone >= 1 and inventory.rope:
 		inventory.spear += 1
 		inventory.stick -= 2
+		inventory.rope -= 1
 		print("You have " + str(inventory.spear) + " spears")
 	else:
 		print("You dont have enough Resources")
