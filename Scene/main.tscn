@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://btses48djt44a" path="res://Assets/Cave.png" id="1_f6udf"]
 [ext_resource type="Texture2D" uid="uid://csg7ywd73thvv" path="res://Assets/Hässlige Fraupng.png" id="2_sblpm"]
-[ext_resource type="Texture2D" uid="uid://cl10gt78rpxoj" path="res://Grrock.png" id="3_3amdw"]
+[ext_resource type="Texture2D" uid="uid://cl10gt78rpxoj" path="res://Assets/Grrock.png" id="3_3amdw"]
 [ext_resource type="Texture2D" uid="uid://vqa0iqd37w3w" path="res://Assets/Missgeburt.png" id="4_1xcnr"]
 [ext_resource type="Texture2D" uid="uid://2omdjmqjfwlq" path="res://Assets/Mein Beileid.png" id="5_ow1sv"]
 

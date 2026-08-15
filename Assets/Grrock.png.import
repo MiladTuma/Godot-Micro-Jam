@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl10gt78rpxoj"
-path="res://.godot/imported/Grrock.png-99007ea2d25ac17c51b8ac8f082ba174.ctex"
+path="res://.godot/imported/Grrock.png-a14a1d22c30cf69f81882d923173fde1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Grrock.png"
-dest_files=["res://.godot/imported/Grrock.png-99007ea2d25ac17c51b8ac8f082ba174.ctex"]
+source_file="res://Assets/Grrock.png"
+dest_files=["res://.godot/imported/Grrock.png-a14a1d22c30cf69f81882d923173fde1.ctex"]
 
 [params]
 
