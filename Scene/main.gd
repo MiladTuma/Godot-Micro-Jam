@@ -38,7 +38,8 @@ func new_day():
 	run_is_over()
 
 
-
+func run_is_over():
+	pass
 
 func check_hunger_timer():
 	Men.days_left_before_hungry -= 1
@@ -98,9 +99,6 @@ func _on_food_search_button_button_down() -> void:
 	%inventory.visible = false 
 	%food.visible = false
 	%search_for_food.visible = true
-	
-	%NextDay.visible = false
-	%InventoryUi.visible = false
 
 
 func _on_food_change_button_button_down() -> void:
@@ -108,9 +106,6 @@ func _on_food_change_button_button_down() -> void:
 	%inventory.visible = false 
 	%food.visible = true
 	%search_for_food.visible = false
-	
-	%NextDay.visible = false
-	%InventoryUi.visible = false
 
 
 func _on_inventory_button_button_down() -> void:
@@ -118,9 +113,6 @@ func _on_inventory_button_button_down() -> void:
 	%inventory.visible = true
 	%food.visible = false
 	%search_for_food.visible = false
-	
-	%NextDay.visible = false
-	%InventoryUi.visible = true
 
 
 func _on_day_info_button_button_down() -> void:
@@ -128,6 +120,3 @@ func _on_day_info_button_button_down() -> void:
 	%inventory.visible = false 
 	%food.visible = false
 	%search_for_food.visible = false
-	
-	%NextDay.visible = true
-	%InventoryUi.visible = false
