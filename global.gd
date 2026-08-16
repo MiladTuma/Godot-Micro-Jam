@@ -4,9 +4,10 @@ extends Node
 signal inventory_changed
 
 @export var food : int = 8
+@export var water : int = 5
 @export var herbs : int = 5
 @export var spear : int = 3
-@export var leather : int = 1
+@export var leather : int = 0
 @export var rope : int = 1
 @export var stick : int = 2
 @export var stone : int = 4

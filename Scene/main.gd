@@ -8,9 +8,9 @@ func _ready() -> void:
 	pass
 
 func _process(_delta: float) -> void:
-	label.update_inventory()
-	if Global.is_run_over == true or Global.health <= 0:
-		run_is_over()
+
+	if Global.is_run_over == true:
+		print("You lost")
 
 func new_day():
 	check_hunger_timer()
@@ -27,16 +27,17 @@ func new_day():
 	if Men.visible == false:
 		Global.is_run_over = true
 		
+	run_is_over()
 
 
 func run_is_over():
-	
+	if Global.health <= 0:
 		# Reset resources
 		Global.food = 8
 		Global.water = 5
-		Global.herbs = 5
+		Global.herbs = 0
 		Global.spear = 3
-		Global.leather = 1
+		Global.leather = 0
 		Global.rope = 1
 		Global.stick = 2
 		Global.stone = 4
