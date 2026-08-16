@@ -6,10 +6,6 @@
 [ext_resource type="Resource" uid="uid://bqkhivhoegvug" path="res://Components/Character.tres" id="4_0sxm5"]
 [ext_resource type="Script" uid="uid://brck7kodnrgjg" path="res://Scene/men.gd" id="5_c2iwn"]
 [ext_resource type="Script" uid="uid://c46pxy75271ir" path="res://Scene/next_day.gd" id="13_0sxm5"]
-[ext_resource type="Texture2D" uid="uid://6fvgsudylqqg" path="res://Assets/Assets 2 weil idk/good boy.png" id="13_sor6r"]
-[ext_resource type="Texture2D" uid="uid://chxoq8p60k38t" path="res://Assets/leder.png" id="14_aam5o"]
-[ext_resource type="Texture2D" uid="uid://bakny8bk0phh5" path="res://Assets/Assets 2 weil idk/meineseeleverlässtdenköprer.png" id="14_pqe63"]
-[ext_resource type="Texture2D" uid="uid://crfa0ojpwhkdr" path="res://Assets/Assets 2 weil idk/schwert.png" id="15_aam5o"]
 [ext_resource type="Script" uid="uid://drveyq56u82ih" path="res://Scene/book.gd" id="16_nyb1q"]
 [ext_resource type="Texture2D" uid="uid://yfeppff1bwg5" path="res://Craft_01-Photoroom.png" id="16_p2wc2"]
 [ext_resource type="Texture2D" uid="uid://7dbydu1a4cbh" path="res://New Template(1).png" id="16_p4j74"]
@@ -133,12 +129,9 @@ unique_name_in_owner = true
 position = Vector2(535, 319)
 texture = ExtResource("19_hiice")
 
-[node name="Spear_items" type="Label" parent="book/search_for_food" unique_id=267981730]
-unique_name_in_owner = true
-offset_left = 34.0
-offset_top = -196.0
-offset_right = 223.0
-offset_bottom = 205.0
+[node name="Label" type="Label" parent="book/search_for_food" unique_id=267981730]
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="Button" type="Button" parent="book/search_for_food" unique_id=1263778116]
 offset_left = -166.0
