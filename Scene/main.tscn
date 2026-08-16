@@ -6,9 +6,13 @@
 [ext_resource type="Resource" uid="uid://bqkhivhoegvug" path="res://Components/Character.tres" id="4_0sxm5"]
 [ext_resource type="Script" uid="uid://brck7kodnrgjg" path="res://Scene/men.gd" id="5_c2iwn"]
 [ext_resource type="Script" uid="uid://c46pxy75271ir" path="res://Scene/next_day.gd" id="13_0sxm5"]
+[ext_resource type="Texture2D" uid="uid://6fvgsudylqqg" path="res://Assets/Assets 2 weil idk/good boy.png" id="13_sor6r"]
+[ext_resource type="Texture2D" uid="uid://bakny8bk0phh5" path="res://Assets/Assets 2 weil idk/meineseeleverlässtdenköprer.png" id="14_pqe63"]
+[ext_resource type="Texture2D" uid="uid://crfa0ojpwhkdr" path="res://Assets/Assets 2 weil idk/schwert.png" id="15_aam5o"]
 [ext_resource type="Script" uid="uid://drveyq56u82ih" path="res://Scene/book.gd" id="16_nyb1q"]
 [ext_resource type="Texture2D" uid="uid://yfeppff1bwg5" path="res://Craft_01-Photoroom.png" id="16_p2wc2"]
 [ext_resource type="Texture2D" uid="uid://7dbydu1a4cbh" path="res://New Template(1).png" id="16_p4j74"]
+[ext_resource type="Texture2D" uid="uid://cu4dtjgstfg7m" path="res://Assets/Assets 2 weil idk/Unbenanntes_Projekt.webp" id="16_xw8bv"]
 [ext_resource type="Script" uid="uid://js17ag7wvhga" path="res://Scene/button.gd" id="17_hiice"]
 [ext_resource type="Texture2D" uid="uid://n3v6erw63xsj" path="res://Craft_03-Photoroom.png" id="17_jbas8"]
 [ext_resource type="Script" uid="uid://cdoiw45k1jh7c" path="res://Scene/label.gd" id="18_aam5o"]
@@ -73,6 +77,7 @@ texture = ExtResource("16_p2wc2")
 
 [node name="NextDay" type="Button" parent="book/day_inf" unique_id=1040163772 node_paths=PackedStringArray("main")]
 unique_name_in_owner = true
+visible = false
 offset_left = -88.0
 offset_top = -270.0
 offset_right = 172.99976
@@ -86,17 +91,39 @@ main = NodePath("../../..")
 
 [node name="inventory" type="Sprite2D" parent="book" unique_id=771375147]
 unique_name_in_owner = true
+visible = false
 position = Vector2(535, 319)
 texture = ExtResource("17_jbas8")
 
 [node name="Label" type="Label" parent="book/inventory" unique_id=875095572]
-offset_left = -132.0
-offset_top = -197.0
-offset_right = 44.0
-offset_bottom = 63.0
-scale = Vector2(2, 2)
+offset_left = -170.0
+offset_top = -233.0
+offset_right = 246.0
+offset_bottom = 238.0
 offset_transform_scale = Vector2(2, 2)
+theme_override_font_sizes/font_size = 32
+text = "Inventory Stuff:"
 script = ExtResource("18_aam5o")
+
+[node name="GoodBoy" type="Sprite2D" parent="book/inventory" unique_id=1568658568]
+position = Vector2(239.99994, 232)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("13_sor6r")
+
+[node name="Sprite2D" type="Sprite2D" parent="book/inventory" unique_id=27424515]
+position = Vector2(91.99997, 238.99997)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("14_pqe63")
+
+[node name="Sprite2D2" type="Sprite2D" parent="book/inventory" unique_id=2089924629]
+position = Vector2(105.99999, 222.99998)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("15_aam5o")
+
+[node name="Sprite2D3" type="Sprite2D" parent="book/inventory" unique_id=1206613303]
+position = Vector2(-94, 220)
+scale = Vector2(0.235, 0.235)
+texture = ExtResource("16_xw8bv")
 
 [node name="food" type="Sprite2D" parent="book" unique_id=1022957555]
 unique_name_in_owner = true
@@ -126,6 +153,7 @@ script = ExtResource("20_aam5o")
 
 [node name="search_for_food" type="Sprite2D" parent="book" unique_id=1247902677]
 unique_name_in_owner = true
+visible = false
 position = Vector2(535, 319)
 texture = ExtResource("19_hiice")
 
