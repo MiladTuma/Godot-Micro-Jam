@@ -90,10 +90,10 @@ script = ExtResource("16_nyb1q")
 
 [node name="book_opening" type="Button" parent="book" unique_id=1839169022]
 unique_name_in_owner = true
-offset_left = 990.0
-offset_top = 244.0
-offset_right = 1148.0
-offset_bottom = 402.0
+offset_left = 991.0
+offset_top = 243.0
+offset_right = 1149.0
+offset_bottom = 401.0
 icon = ExtResource("16_p4j74")
 flat = true
 script = ExtResource("17_hiice")
@@ -135,6 +135,7 @@ script = ExtResource("15_j63at")
 
 [node name="food" type="Sprite2D" parent="book" unique_id=1022957555]
 unique_name_in_owner = true
+visible = false
 position = Vector2(535, 319)
 texture = ExtResource("18_p4j74")
 
@@ -143,7 +144,7 @@ offset_left = -56.0
 offset_top = 125.0
 offset_right = 134.0
 offset_bottom = 210.0
-text = "Feed the Family. Cost 4 Meat."
+text = "Feed the Family 4 Food."
 script = ExtResource("17_hiice")
 
 [node name="Label" type="Label" parent="book/food" unique_id=1877935228]
@@ -153,7 +154,7 @@ offset_right = 405.0
 offset_bottom = -172.0
 rotation = -2.1546237e-05
 theme_override_font_sizes/font_size = 32
-text = "2 Day / Days left until you
+text = "3 Day / Days left until you
 get damage "
 script = ExtResource("20_aam5o")
 
@@ -206,6 +207,7 @@ script = ExtResource("25_xw8bv")
 
 [connection signal="button_down" from="Crafting/Craft Spear" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="book/book_opening" to="book/book_opening" method="_on_button_down"]
+[connection signal="pressed" from="book/book_opening" to="book" method="_on_book_opening_pressed"]
 [connection signal="pressed" from="book/day_inf/NextDay" to="book/day_inf/NextDay" method="_on_pressed"]
 [connection signal="button_down" from="book/food/Button" to="book/food/Button" method="_on_button_down"]
 [connection signal="button_down" from="book/food_search_button" to="." method="_on_food_search_button_button_down"]

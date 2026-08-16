@@ -29,3 +29,15 @@ func check_if_button_needed():
 		%food_change_button.visible = true
 		%inventory_button.visible = true
 		%day_info_button.visible = true
+
+var is_open = false
+func _on_book_opening_pressed() -> void:
+	if is_open == false:
+		%day_inf.visible = true
+		is_open = true
+	elif is_open == true:
+		is_open = false
+		%day_inf.visible = false
+		%inventory.visible = false
+		%food.visible = false
+		%search_for_food.visible = false

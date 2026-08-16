@@ -3,7 +3,7 @@ extends Node
 @warning_ignore("unused_signal")
 signal inventory_changed
 
-@export var meat : int = 10
+@export var food : int = 8
 @export var water : int = 5
 @export var herbs : int = 0
 @export var spear : int = 3
