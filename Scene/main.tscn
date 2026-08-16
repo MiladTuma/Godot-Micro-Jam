@@ -17,26 +17,14 @@
 [ext_resource type="Texture2D" uid="uid://7dbydu1a4cbh" path="res://New Template(1).png" id="16_p4j74"]
 [ext_resource type="Script" uid="uid://js17ag7wvhga" path="res://Scene/button.gd" id="17_hiice"]
 [ext_resource type="Texture2D" uid="uid://n3v6erw63xsj" path="res://Craft_03-Photoroom.png" id="17_jbas8"]
+[ext_resource type="Script" uid="uid://cdoiw45k1jh7c" path="res://Scene/label.gd" id="18_aam5o"]
 [ext_resource type="Texture2D" uid="uid://8o5v4yrlfmh5" path="res://Craft_02-Photoroom.png" id="18_p4j74"]
-[ext_resource type="Script" uid="uid://87l55imulwwq" path="res://Scene/area_2d.gd" id="18_wimqa"]
 [ext_resource type="Texture2D" uid="uid://yngp7obx0sog" path="res://Craft_06-Photoroom.png" id="19_hiice"]
-[ext_resource type="Texture2D" uid="uid://bj3rgsu6x7dfd" path="res://tree-Photoroom.png" id="19_t372l"]
 [ext_resource type="Script" uid="uid://bytpsef7oe0n0" path="res://Scene/invklabk.gd" id="20_aam5o"]
 [ext_resource type="Script" uid="uid://dp80xwbywp1k7" path="res://Scene/food_search_button.gd" id="22_hiice"]
 [ext_resource type="Script" uid="uid://7io4jsxsom5y" path="res://Scene/food_change_button.gd" id="23_aam5o"]
 [ext_resource type="Script" uid="uid://cn6w58wb2fxnj" path="res://Scene/inventory_button.gd" id="24_nyb1q"]
 [ext_resource type="Script" uid="uid://c0ronabp61x66" path="res://Scene/day_info_button.gd" id="25_xw8bv"]
-[ext_resource type="Script" uid="uid://bsx8ffjpvwbgn" path="res://Scene/area_2d_2.gd" id="27_uctnp"]
-[ext_resource type="Texture2D" uid="uid://0lcyy5h47aqb" path="res://slot.png" id="28_m37ut"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_66nk5"]
-size = Vector2(35.208603, 140.2536)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7q6s"]
-size = Vector2(128, 196)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjkgu"]
-size = Vector2(132, 198)
 
 [node name="Main" type="Node2D" unique_id=531477345 node_paths=PackedStringArray("Men", "Woman", "Boy", "Girl")]
 script = ExtResource("1_1xcnr")
@@ -97,6 +85,7 @@ offset_bottom = 620.0
 text = "Craft Spear"
 
 [node name="book" type="Node2D" parent="." unique_id=122271431]
+position = Vector2(6, 13)
 script = ExtResource("16_nyb1q")
 
 [node name="book_opening" type="Button" parent="book" unique_id=1839169022]
@@ -130,57 +119,17 @@ main = NodePath("../../..")
 
 [node name="inventory" type="Sprite2D" parent="book" unique_id=771375147]
 unique_name_in_owner = true
-visible = false
 position = Vector2(535, 319)
 texture = ExtResource("17_jbas8")
 
-[node name="wood" type="Node2D" parent="book/inventory" unique_id=1517421020]
-
-[node name="Area2D" type="Area2D" parent="book/inventory/wood" unique_id=829383766]
-position = Vector2(-84, -146)
-disable_mode = 1
-collision_mask = 3
-script = ExtResource("18_wimqa")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="book/inventory/wood/Area2D" unique_id=2022740958]
-position = Vector2(-16, -47)
-rotation = 0.592988
-shape = SubResource("RectangleShape2D_66nk5")
-
-[node name="Sprite2D" type="Sprite2D" parent="book/inventory/wood/Area2D" unique_id=144741389]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("19_t372l")
-
-[node name="crafring_slot" type="Node2D" parent="book/inventory" unique_id=1319900759]
-position = Vector2(-535, -319)
-
-[node name="Area2D2" type="Area2D" parent="book/inventory/crafring_slot" unique_id=1330150933]
-position = Vector2(419, 425)
-disable_mode = 1
-collision_layer = 3
-script = ExtResource("27_uctnp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="book/inventory/crafring_slot/Area2D2" unique_id=235411013]
-shape = SubResource("RectangleShape2D_d7q6s")
-
-[node name="Sprite2D" type="Sprite2D" parent="book/inventory/crafring_slot/Area2D2" unique_id=2138641741]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("28_m37ut")
-
-[node name="Area2D" type="Area2D" parent="book/inventory/crafring_slot" unique_id=2065989923]
-position = Vector2(569, 426)
-
-[node name="Sprite2D2" type="Sprite2D" parent="book/inventory/crafring_slot/Area2D" unique_id=1404958110]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("28_m37ut")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="book/inventory/crafring_slot/Area2D" unique_id=312365197]
-shape = SubResource("RectangleShape2D_wjkgu")
-
-[node name="Sprite2D3" type="Sprite2D" parent="book/inventory/crafring_slot" unique_id=1704661826]
-position = Vector2(751, 426)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("28_m37ut")
+[node name="Label" type="Label" parent="book/inventory" unique_id=875095572]
+offset_left = -132.0
+offset_top = -197.0
+offset_right = 44.0
+offset_bottom = 63.0
+scale = Vector2(2, 2)
+offset_transform_scale = Vector2(2, 2)
+script = ExtResource("18_aam5o")
 
 [node name="food" type="Sprite2D" parent="book" unique_id=1022957555]
 unique_name_in_owner = true
@@ -210,9 +159,19 @@ script = ExtResource("20_aam5o")
 
 [node name="search_for_food" type="Sprite2D" parent="book" unique_id=1247902677]
 unique_name_in_owner = true
-visible = false
 position = Vector2(535, 319)
 texture = ExtResource("19_hiice")
+
+[node name="Label" type="Label" parent="book/search_for_food" unique_id=267981730]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Button" type="Button" parent="book/search_for_food" unique_id=1263778116]
+offset_left = -166.0
+offset_top = -216.0
+offset_right = -15.0
+offset_bottom = -145.0
+script = ExtResource("17_hiice")
 
 [node name="food_search_button" type="Button" parent="book" unique_id=2013760268]
 unique_name_in_owner = true
@@ -260,8 +219,9 @@ script = ExtResource("25_xw8bv")
 [connection signal="pressed" from="book/book_opening" to="book" method="_on_book_opening_pressed"]
 [connection signal="pressed" from="book/book_opening" to="book/food/Button" method="_on_book_opening_pressed"]
 [connection signal="pressed" from="book/day_inf/NextDay" to="book/day_inf/NextDay" method="_on_pressed"]
-[connection signal="input_event" from="book/inventory/wood/Area2D" to="book/inventory/wood/Area2D" method="_on_input_event"]
 [connection signal="button_down" from="book/food/Button" to="book/food/Button" method="_on_button_down"]
+[connection signal="mouse_entered" from="book/search_for_food/Button" to="book/search_for_food/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="book/search_for_food/Button" to="book/search_for_food/Button" method="_on_mouse_exited"]
 [connection signal="button_down" from="book/food_search_button" to="." method="_on_food_search_button_button_down"]
 [connection signal="button_down" from="book/food_change_button" to="." method="_on_food_change_button_button_down"]
 [connection signal="button_down" from="book/inventory_button" to="." method="_on_inventory_button_button_down"]

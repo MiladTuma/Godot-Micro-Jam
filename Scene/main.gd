@@ -95,3 +95,11 @@ func _on_day_info_button_button_down() -> void:
 	%inventory.visible = false 
 	%food.visible = false
 	%search_for_food.visible = false
+
+
+
+	
+
+
+func _on_button_mouse_entered() -> void:
+	pass # Replace with function body.
