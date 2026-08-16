@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://fgelynrtbs47"]
 
 [ext_resource type="Script" uid="uid://bg660wmafia8m" path="res://Scene/main.gd" id="1_1xcnr"]
-[ext_resource type="Texture2D" uid="uid://12d3w8bh8y7h" path="res://Components/drgdrfg.png" id="2_hiice"]
+[ext_resource type="Texture2D" uid="uid://btses48djt44a" path="res://Assets/Cave.png" id="1_f6udf"]
+[ext_resource type="Texture2D" uid="uid://csg7ywd73thvv" path="res://Assets/Hässlige Fraupng.png" id="2_sblpm"]
 [ext_resource type="Texture2D" uid="uid://cl10gt78rpxoj" path="res://Assets/Grrock.png" id="3_3amdw"]
+[ext_resource type="Script" uid="uid://c5ub5t1cgpaxh" path="res://Scene/women.gd" id="3_75buv"]
 [ext_resource type="Resource" uid="uid://bqkhivhoegvug" path="res://Components/Character.tres" id="4_0sxm5"]
+[ext_resource type="Texture2D" uid="uid://vqa0iqd37w3w" path="res://Assets/Missgeburt.png" id="4_1xcnr"]
 [ext_resource type="Script" uid="uid://brck7kodnrgjg" path="res://Scene/men.gd" id="5_c2iwn"]
+[ext_resource type="Texture2D" uid="uid://2omdjmqjfwlq" path="res://Assets/Mein Beileid.png" id="5_ow1sv"]
+[ext_resource type="Script" uid="uid://m61m28jyx0rf" path="res://Scene/boy.gd" id="7_3pt4j"]
+[ext_resource type="Script" uid="uid://6g8dik6gnq" path="res://Scene/girl.gd" id="9_7y4ci"]
 [ext_resource type="Script" uid="uid://c46pxy75271ir" path="res://Scene/next_day.gd" id="13_0sxm5"]
 [ext_resource type="Script" uid="uid://drveyq56u82ih" path="res://Scene/book.gd" id="16_nyb1q"]
 [ext_resource type="Texture2D" uid="uid://yfeppff1bwg5" path="res://Craft_01-Photoroom.png" id="16_p2wc2"]
@@ -32,18 +38,29 @@ size = Vector2(128, 196)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wjkgu"]
 size = Vector2(132, 198)
 
-[node name="Main" type="Node2D" unique_id=531477345 node_paths=PackedStringArray("Men")]
+[node name="Main" type="Node2D" unique_id=531477345 node_paths=PackedStringArray("Men", "Woman", "Boy", "Girl")]
 script = ExtResource("1_1xcnr")
 Men = NodePath("Character/Men")
+Woman = NodePath("Character/Woman")
+Boy = NodePath("Character/Boy")
+Girl = NodePath("Character/Girl")
 
 [node name="Assets" type="Node2D" parent="." unique_id=165086258]
 
 [node name="Hintergrund" type="Sprite2D" parent="Assets" unique_id=222327150]
 position = Vector2(575.99994, 323.99994)
 scale = Vector2(0.59999996, 0.59999996)
-texture = ExtResource("2_hiice")
+texture = ExtResource("1_f6udf")
 
 [node name="Character" type="Node2D" parent="." unique_id=39491453]
+
+[node name="Woman" type="Node2D" parent="Character" unique_id=17963898]
+script = ExtResource("3_75buv")
+stats = ExtResource("4_0sxm5")
+
+[node name="Hässlige Frau" type="Sprite2D" parent="Character/Woman" unique_id=776080943]
+position = Vector2(841, 248)
+texture = ExtResource("2_sblpm")
 
 [node name="Men" type="Node2D" parent="Character" unique_id=1472193720]
 script = ExtResource("5_c2iwn")
@@ -52,6 +69,22 @@ stats = ExtResource("4_0sxm5")
 [node name="Titan" type="Sprite2D" parent="Character/Men" unique_id=1908241048]
 position = Vector2(732, 240)
 texture = ExtResource("3_3amdw")
+
+[node name="Boy" type="Node2D" parent="Character" unique_id=907755946]
+script = ExtResource("7_3pt4j")
+stats = ExtResource("4_0sxm5")
+
+[node name="Missgeburt" type="Sprite2D" parent="Character/Boy" unique_id=128120928]
+position = Vector2(532, 278)
+texture = ExtResource("4_1xcnr")
+
+[node name="Girl" type="Node2D" parent="Character" unique_id=824051862]
+script = ExtResource("9_7y4ci")
+stats = ExtResource("4_0sxm5")
+
+[node name="Mein Beileid" type="Sprite2D" parent="Character/Girl" unique_id=492493437]
+position = Vector2(399, 235)
+texture = ExtResource("5_ow1sv")
 
 [node name="Crafting" type="Node2D" parent="." unique_id=1300979662]
 position = Vector2(37, 28)
