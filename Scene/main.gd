@@ -109,13 +109,3 @@ func _on_day_info_button_button_down() -> void:
 
 func _on_button_mouse_entered() -> void:
 	pass # Replace with function body.
-
-
-func _on_craft_rope_button_down() -> void:
-	if Global.stick >= 2 and Global.stone >= 1 and Global.rope >= 1:
-		Global.leather -= 3
-		Global.rope += 1
-		
-		Global.inventory_changed.emit()
-	else:
-		print("You dont have enough Resources")
