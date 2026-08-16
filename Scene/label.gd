@@ -1,7 +1,7 @@
 extends Label
 
 
-var items = ["meat", "berries", "herbs", "water", "leather", "rope", "stick", "stone", "spear"]
+var items = ["meat", "herbs", "water", "leather", "rope", "stick", "stone", "spear"]
 
 func _ready():
 	Global.inventory_changed.connect(update_inventory)
