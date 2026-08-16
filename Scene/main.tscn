@@ -172,7 +172,7 @@ offset_right = 540.0
 offset_bottom = 289.0
 text = "Craft Spear
 Cost: 2 Sticks
-2 Leather
+1 Rope
 1 Stone"
 
 [node name="Craft Rope" type="Button" parent="book/search_for_food/Crafting" unique_id=891679050]

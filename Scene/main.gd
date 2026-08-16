@@ -61,6 +61,7 @@ func craft_spear():
 		Global.spear += 1
 		Global.stick -= 2
 		Global.rope -= 1
+		Global.stone -= 1
 		
 		Global.inventory_changed.emit()
 	else:

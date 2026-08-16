@@ -1,7 +1,7 @@
 ~ start
 Book: A new day has started.
 %
-	A mysterious caveman came to you and made an intriguing offer. if you give him a herb, he might give you 5 back, but his trustworthyness is debatable. Do you accept the deal?
+	A mysterious caveman came to you and made an intriguing offer. if you give him a herb, he might give you 5 back, but his trustworthiness is debatable. Do you accept the deal?
 	=> gambling
 %
 	Book: A horrible blizzard has started. Do you use a piece of leather to cover yourself?
