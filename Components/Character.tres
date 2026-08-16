@@ -5,4 +5,5 @@
 [resource]
 resource_local_to_scene = true
 script = ExtResource("1_s6dk3")
+damage_amount_hungry = 20
 metadata/_custom_type_script = "uid://gnw1ororet1l"
