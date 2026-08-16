@@ -29,14 +29,14 @@
 [ext_resource type="Script" uid="uid://bsx8ffjpvwbgn" path="res://Scene/area_2d_2.gd" id="27_uctnp"]
 [ext_resource type="Texture2D" uid="uid://0lcyy5h47aqb" path="res://slot.png" id="28_m37ut"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66nk5"]
+size = Vector2(35.208603, 140.2536)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7q6s"]
 size = Vector2(128, 196)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wjkgu"]
 size = Vector2(132, 198)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_66nk5"]
-size = Vector2(35.208603, 140.2536)
 
 [node name="Main" type="Node2D" unique_id=531477345 node_paths=PackedStringArray("Men", "Woman", "Boy", "Girl")]
 script = ExtResource("1_1xcnr")
@@ -130,8 +130,26 @@ main = NodePath("../../..")
 
 [node name="inventory" type="Sprite2D" parent="book" unique_id=771375147]
 unique_name_in_owner = true
+visible = false
 position = Vector2(535, 319)
 texture = ExtResource("17_jbas8")
+
+[node name="wood" type="Node2D" parent="book/inventory" unique_id=1517421020]
+
+[node name="Area2D" type="Area2D" parent="book/inventory/wood" unique_id=829383766]
+position = Vector2(-84, -146)
+disable_mode = 1
+collision_mask = 3
+script = ExtResource("18_wimqa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book/inventory/wood/Area2D" unique_id=2022740958]
+position = Vector2(-16, -47)
+rotation = 0.592988
+shape = SubResource("RectangleShape2D_66nk5")
+
+[node name="Sprite2D" type="Sprite2D" parent="book/inventory/wood/Area2D" unique_id=144741389]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("19_t372l")
 
 [node name="crafring_slot" type="Node2D" parent="book/inventory" unique_id=1319900759]
 position = Vector2(-535, -319)
@@ -163,23 +181,6 @@ shape = SubResource("RectangleShape2D_wjkgu")
 position = Vector2(751, 426)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("28_m37ut")
-
-[node name="wood" type="Node2D" parent="book/inventory" unique_id=1517421020]
-
-[node name="Area2D" type="Area2D" parent="book/inventory/wood" unique_id=829383766]
-position = Vector2(-84, -146)
-disable_mode = 1
-collision_mask = 3
-script = ExtResource("18_wimqa")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="book/inventory/wood/Area2D" unique_id=2022740958]
-position = Vector2(-16, -47)
-rotation = 0.592988
-shape = SubResource("RectangleShape2D_66nk5")
-
-[node name="Sprite2D" type="Sprite2D" parent="book/inventory/wood/Area2D" unique_id=144741389]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("19_t372l")
 
 [node name="food" type="Sprite2D" parent="book" unique_id=1022957555]
 unique_name_in_owner = true
