@@ -1,6 +1,9 @@
 ~ start
 Book: A new day has started.
 %
+	Book: A horrible blizzard has started. Do you use a piece of leather to cover yourself?
+	=> blizzard
+%
 	You noticed screams coming out of a cave. The caveman in there asks for a rope and offers 3 herbs for it. Do you take the deal?
 	=> rescue
 %3
@@ -14,8 +17,22 @@ Book: A new day has started.
 	Book: There is a sabretooth at your front door.
 	=> sabretooth
 	
-	~ rescue
+	~ blizzard
+	- don't use it
+		Book: You shiver through the entire storm, which leads in you getting sick and losing 20 health.
+		do Global.health -= 20
+		=> END
+	- cover yourself
+	if Global.leather >= 1
+		Book: You sleep through the entire blizzard in a cozy piece of leather. The leather is soaked and damaged now, but you are not.
+		do Global.leather -=1
+		=> END
+	else
+		Book: You did not have leather, and suffered from a severe cold, losing health in the process.
+		do Global.health -= 20
+		=> END
 	
+	~ rescue
 	- don't rescue
 		Book: The caveman screamed in anger and agony as you told him that you are unwilling to help him. You hurried home.
 		=> END

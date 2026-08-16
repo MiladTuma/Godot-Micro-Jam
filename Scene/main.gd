@@ -35,9 +35,9 @@ func run_is_over():
 		# Reset resources
 		Global.food = 8
 		Global.water = 5
-		Global.herbs = 0
+		Global.herbs = 5
 		Global.spear = 3
-		Global.leather = 0
+		Global.leather = 1
 		Global.rope = 1
 		Global.stick = 2
 		Global.stone = 4
