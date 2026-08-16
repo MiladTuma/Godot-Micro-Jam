@@ -33,7 +33,6 @@ func run_is_over():
 	
 		# Reset resources
 		Global.food = 8
-		Global.water = 5
 		Global.herbs = 5
 		Global.spear = 3
 		Global.leather = 1
@@ -67,6 +66,13 @@ func craft_spear():
 	else:
 		print("You dont have enough Resources")
 
+func craft_rope():
+	if Global.leather >= 3:
+		Global.rope += 1
+		Global.leather -= 3
+		
+	else:
+		print("You dont have enough Resources")
 
 func _on_button_button_down() -> void:
 	craft_spear()
@@ -108,3 +114,7 @@ func _on_day_info_button_button_down() -> void:
 
 func _on_button_mouse_entered() -> void:
 	pass # Replace with function body.
+
+
+func _on_craft_rope_button_down() -> void:
+	craft_rope()
