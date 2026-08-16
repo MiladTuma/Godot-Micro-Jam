@@ -15,6 +15,17 @@
 [ext_resource type="Script" uid="uid://d4m1bfu5qxxlv" path="res://Scene/inventory_ui.gd" id="14_hspdg"]
 [ext_resource type="Script" uid="uid://bmpeapduubs3a" path="res://Components/Inventory.gd" id="15_6njx3"]
 [ext_resource type="Script" uid="uid://cdoiw45k1jh7c" path="res://Scene/label.gd" id="15_j63at"]
+[ext_resource type="Script" uid="uid://drveyq56u82ih" path="res://Scene/book.gd" id="16_nyb1q"]
+[ext_resource type="Texture2D" uid="uid://yfeppff1bwg5" path="res://Craft_01-Photoroom.png" id="16_p2wc2"]
+[ext_resource type="Texture2D" uid="uid://7dbydu1a4cbh" path="res://New Template(1).png" id="16_p4j74"]
+[ext_resource type="Script" uid="uid://js17ag7wvhga" path="res://Scene/button.gd" id="17_hiice"]
+[ext_resource type="Texture2D" uid="uid://n3v6erw63xsj" path="res://Craft_03-Photoroom.png" id="17_jbas8"]
+[ext_resource type="Texture2D" uid="uid://8o5v4yrlfmh5" path="res://Craft_02-Photoroom.png" id="18_p4j74"]
+[ext_resource type="Texture2D" uid="uid://yngp7obx0sog" path="res://Craft_06-Photoroom.png" id="19_hiice"]
+[ext_resource type="Script" uid="uid://dp80xwbywp1k7" path="res://Scene/food_search_button.gd" id="22_hiice"]
+[ext_resource type="Script" uid="uid://7io4jsxsom5y" path="res://Scene/food_change_button.gd" id="23_aam5o"]
+[ext_resource type="Script" uid="uid://cn6w58wb2fxnj" path="res://Scene/inventory_button.gd" id="24_nyb1q"]
+[ext_resource type="Script" uid="uid://c0ronabp61x66" path="res://Scene/day_info_button.gd" id="25_xw8bv"]
 
 [sub_resource type="Resource" id="Resource_j63at"]
 script = ExtResource("15_6njx3")
@@ -113,6 +124,89 @@ text = "Ressources:
 "
 script = ExtResource("15_j63at")
 
+[node name="book" type="Node2D" parent="." unique_id=122271431]
+script = ExtResource("16_nyb1q")
+
+[node name="book_opening" type="Button" parent="book" unique_id=1839169022]
+unique_name_in_owner = true
+offset_left = 990.0
+offset_top = 244.0
+offset_right = 1148.0
+offset_bottom = 402.0
+icon = ExtResource("16_p4j74")
+flat = true
+script = ExtResource("17_hiice")
+
+[node name="day_inf" type="Sprite2D" parent="book" unique_id=885571446]
+unique_name_in_owner = true
+visible = false
+position = Vector2(535, 319)
+texture = ExtResource("16_p2wc2")
+
+[node name="inventory" type="Sprite2D" parent="book" unique_id=771375147]
+unique_name_in_owner = true
+visible = false
+position = Vector2(535, 319)
+texture = ExtResource("17_jbas8")
+
+[node name="food" type="Sprite2D" parent="book" unique_id=1022957555]
+unique_name_in_owner = true
+visible = false
+position = Vector2(535, 319)
+texture = ExtResource("18_p4j74")
+
+[node name="search_for_food" type="Sprite2D" parent="book" unique_id=1247902677]
+unique_name_in_owner = true
+visible = false
+position = Vector2(535, 319)
+texture = ExtResource("19_hiice")
+
+[node name="food_search_button" type="Button" parent="book" unique_id=2013760268]
+unique_name_in_owner = true
+offset_left = 807.0
+offset_top = 41.0
+offset_right = 943.0
+offset_bottom = 177.0
+scale = Vector2(0.7266371, 0.6852582)
+offset_transform_enabled = true
+flat = true
+script = ExtResource("22_hiice")
+
+[node name="food_change_button" type="Button" parent="book" unique_id=999985109]
+unique_name_in_owner = true
+offset_left = 818.0
+offset_top = 154.0
+offset_right = 954.0
+offset_bottom = 290.0
+scale = Vector2(0.6325757, 0.6199994)
+offset_transform_enabled = true
+flat = true
+script = ExtResource("23_aam5o")
+
+[node name="inventory_button" type="Button" parent="book" unique_id=960712917]
+unique_name_in_owner = true
+offset_left = 814.0
+offset_top = 261.0
+offset_right = 950.0
+offset_bottom = 410.248
+scale = Vector2(0.61462116, 0.50251925)
+flat = true
+script = ExtResource("24_nyb1q")
+
+[node name="day_info_button" type="Button" parent="book" unique_id=1972846901]
+unique_name_in_owner = true
+offset_left = 829.0
+offset_top = 368.0
+offset_right = 901.0
+offset_bottom = 449.0
+flat = true
+script = ExtResource("25_xw8bv")
+
 [connection signal="button_down" from="Crafting/Craft Spear" to="." method="_on_button_button_down"]
 [connection signal="pressed" from="NextDay" to="NextDay" method="_on_pressed"]
 [connection signal="pressed" from="Inventory/Toggle Inventory" to="Inventory/InventoryUi" method="_on_toggle_inventory_pressed"]
+[connection signal="button_down" from="book/book_opening" to="book/book_opening" method="_on_button_down"]
+[connection signal="button_down" from="book/food_search_button" to="." method="_on_food_search_button_button_down"]
+[connection signal="button_down" from="book/food_change_button" to="." method="_on_food_change_button_button_down"]
+[connection signal="button_down" from="book/inventory_button" to="." method="_on_inventory_button_button_down"]
+[connection signal="button_down" from="book/day_info_button" to="." method="_on_day_info_button_button_down"]

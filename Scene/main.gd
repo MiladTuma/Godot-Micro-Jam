@@ -84,3 +84,32 @@ func _on_button_button_down() -> void:
 
 func update_inventory():
 	label.update_inventory()
+
+
+func _on_food_search_button_button_down() -> void:
+	%day_inf.visible = false
+	%inventory.visible = false 
+	%food.visible = false
+	%search_for_food.visible = true
+		
+
+
+func _on_food_change_button_button_down() -> void:
+	%day_inf.visible = false
+	%inventory.visible = false 
+	%food.visible = true
+	%search_for_food.visible = false
+
+
+func _on_inventory_button_button_down() -> void:
+	%day_inf.visible = false
+	%inventory.visible = true
+	%food.visible = false
+	%search_for_food.visible = false
+
+
+func _on_day_info_button_button_down() -> void:
+	%day_inf.visible = true
+	%inventory.visible = false 
+	%food.visible = false
+	%search_for_food.visible = false
