@@ -52,16 +52,6 @@ stats = ExtResource("4_0sxm5")
 position = Vector2(732, 240)
 texture = ExtResource("3_3amdw")
 
-[node name="Crafting" type="Node2D" parent="." unique_id=1300979662]
-position = Vector2(37, 28)
-
-[node name="Craft Spear" type="Button" parent="Crafting" unique_id=395552000]
-offset_left = -37.0
-offset_top = 517.0
-offset_right = 172.0
-offset_bottom = 620.0
-text = "Craft Spear"
-
 [node name="book" type="Node2D" parent="." unique_id=122271431]
 position = Vector2(6, 13)
 script = ExtResource("16_nyb1q")
@@ -172,12 +162,26 @@ texture = ExtResource("19_hiice")
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Button" type="Button" parent="book/search_for_food" unique_id=1263778116]
-offset_left = -166.0
-offset_top = -216.0
-offset_right = -15.0
-offset_bottom = -145.0
-script = ExtResource("17_hiice")
+[node name="Crafting" type="Node2D" parent="book/search_for_food" unique_id=1300979662]
+position = Vector2(-504, -304)
+
+[node name="Craft Spear" type="Button" parent="book/search_for_food/Crafting" unique_id=395552000]
+offset_left = 331.0
+offset_top = 186.0
+offset_right = 540.0
+offset_bottom = 289.0
+text = "Craft Spear
+Cost: 2 Sticks
+2 Leather
+1 Stone"
+
+[node name="Craft Rope" type="Button" parent="book/search_for_food/Crafting" unique_id=891679050]
+offset_left = 329.0
+offset_top = 51.0
+offset_right = 538.0
+offset_bottom = 154.0
+text = "Craft Rope
+Cost: 3 Leather"
 
 [node name="food_search_button" type="Button" parent="book" unique_id=2013760268]
 unique_name_in_owner = true
@@ -220,14 +224,13 @@ offset_bottom = 449.0
 flat = true
 script = ExtResource("25_xw8bv")
 
-[connection signal="button_down" from="Crafting/Craft Spear" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="book/book_opening" to="book/book_opening" method="_on_button_down"]
 [connection signal="pressed" from="book/book_opening" to="book" method="_on_book_opening_pressed"]
 [connection signal="pressed" from="book/book_opening" to="book/food/Button" method="_on_book_opening_pressed"]
 [connection signal="pressed" from="book/day_inf/NextDay" to="book/day_inf/NextDay" method="_on_pressed"]
 [connection signal="button_down" from="book/food/Button" to="book/food/Button" method="_on_button_down"]
-[connection signal="mouse_entered" from="book/search_for_food/Button" to="book/search_for_food/Button" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="book/search_for_food/Button" to="book/search_for_food/Button" method="_on_mouse_exited"]
+[connection signal="button_down" from="book/search_for_food/Crafting/Craft Spear" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="book/search_for_food/Crafting/Craft Rope" to="." method="_on_craft_rope_button_down"]
 [connection signal="button_down" from="book/food_search_button" to="." method="_on_food_search_button_button_down"]
 [connection signal="button_down" from="book/food_change_button" to="." method="_on_food_change_button_button_down"]
 [connection signal="button_down" from="book/inventory_button" to="." method="_on_inventory_button_button_down"]
