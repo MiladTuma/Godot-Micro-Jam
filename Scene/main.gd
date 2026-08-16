@@ -18,12 +18,15 @@ func _process(_delta: float) -> void:
 func new_day():
 	check_hunger_timer()
 	
+	
 	if Global.health <= 0:
 		Men.visible = false
 		Girl.visible = false
 		Woman.visible = false
 		Boy.visible = false
-	
+	Global.health += 5
+	if Global.health > 100:
+		Global.health = 100
 	var dialogue_resource = load("res://Dialogue Stuff (Dont Touch)/Book.dialogue")
 	DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
 	

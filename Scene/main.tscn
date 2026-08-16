@@ -143,7 +143,7 @@ offset_left = -56.0
 offset_top = 125.0
 offset_right = 134.0
 offset_bottom = 210.0
-text = "Feed"
+text = "Feed the Family. Cost 4 Meat."
 script = ExtResource("17_hiice")
 
 [node name="Label" type="Label" parent="book/food" unique_id=1877935228]
