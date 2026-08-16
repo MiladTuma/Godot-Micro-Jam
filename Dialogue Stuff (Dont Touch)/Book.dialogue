@@ -25,7 +25,7 @@ Book: A new day has started.
 		% 
 			Book: He did not seem to be bothered by you and he walked away.
 		% 
-			Book: You could not defend yourself against him, unaliving everyone.
+			Book: You could not defend yourself against him, and the sabretooth consumed everybody.
 			do Global.is_run_over = true
 		=> END
 
@@ -33,14 +33,23 @@ Book: A new day has started.
 	Book: You found a mammoth
 	
 	- Chase it
-		%5
-			Book: You got 20 Meat and 10 leather.
-			do Global.meat += 20
-			do Global.leather += 10
-		%5
-			Book: You injured yourself, but got 10 leather and 20 Meat.
-			do Global.meat += 20
-			do Global.leather += 10
+		if Global.spear >= 1
+			%
+				Book: You got 20 Meat and 10 leather.
+				do Global.meat += 20
+				do Global.leather += 10
+				do Global.spear -= 1
+				=> END
+			%
+				Book: You injured yourself, but got 10 leather and 20 Meat.
+				do Global.meat += 20
+				do Global.leather += 10
+				do Global.spear -= 1
+				=> END
+		else
+			Book: You did not have a spear.
+			Book: It ran away.
+			=> END
 			# do injure
 	- Dont chase it
 		Book: It ran away.
