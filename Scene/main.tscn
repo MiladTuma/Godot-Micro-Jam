@@ -97,6 +97,7 @@ main = NodePath("../../..")
 
 [node name="inventory" type="Sprite2D" parent="book" unique_id=771375147]
 unique_name_in_owner = true
+visible = false
 position = Vector2(535, 319)
 texture = ExtResource("17_jbas8")
 
@@ -221,7 +222,6 @@ flat = true
 script = ExtResource("25_xw8bv")
 
 [connection signal="button_down" from="Crafting/Craft Spear" to="." method="_on_button_button_down"]
-[connection signal="button_down" from="book/book_opening" to="book/book_opening" method="_on_button_down"]
 [connection signal="pressed" from="book/book_opening" to="book" method="_on_book_opening_pressed"]
 [connection signal="pressed" from="book/book_opening" to="book/food/Button" method="_on_book_opening_pressed"]
 [connection signal="pressed" from="book/day_inf/NextDay" to="book/day_inf/NextDay" method="_on_pressed"]
