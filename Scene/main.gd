@@ -11,7 +11,7 @@ func _ready() -> void:
 	pass
 
 func _process(_delta: float) -> void:
-	update_inventory()
+
 	if Global.is_run_over == true:
 		print("You lost")
 
@@ -66,8 +66,7 @@ func craft_spear():
 func _on_button_button_down() -> void:
 	craft_spear()
 
-func update_inventory():
-	label.update_inventory()
+
 
 
 func _on_food_search_button_button_down() -> void:
