@@ -1,7 +1,7 @@
 ~ start
 Book: A new day has started.
-%3000000
-	Book: A caveman has come to trade with you. Do you want to?
+%3
+	Book: A caveman has come to trade with you. He offers  2 mystery items for 5 herbs. Do you want to?
 	=> trade
 %13 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
 % 
