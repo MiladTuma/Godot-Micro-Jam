@@ -37,7 +37,25 @@ func new_day():
 
 
 func run_is_over():
-	pass
+	if Global.health <= 0:
+		# Reset resources
+		Global.food = 8
+		Global.water = 5
+		Global.herbs = 0
+		Global.spear = 3
+		Global.leather = 0
+		Global.rope = 1
+		Global.stick = 2
+		Global.stone = 4
+		
+		# Reset status variables
+		Global.is_run_over = false
+		Global.days_before_hungry = 3
+		Global.health = 100
+		
+		
+		# Reload the actual scene
+		get_tree().reload_current_scene()
 
 func check_hunger_timer():
 	Global.days_before_hungry -= 1
