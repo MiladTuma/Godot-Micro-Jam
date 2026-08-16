@@ -17,17 +17,12 @@ func _process(_delta: float) -> void:
 
 func new_day():
 	check_hunger_timer()
-	check_sikness()
-	check_hurt()
 	
-	if Men.current_hp <= 0:
+	if Global.health <= 0:
 		Men.visible = false
-	if Woman.current_hp <= 0:
-		Woman.visible = false
-	if Boy.current_hp <= 0:
-		Boy.visible = false
-	if Girl.current_hp <= 0:
 		Girl.visible = false
+		Woman.visible = false
+		Boy.visible = false
 	
 	var dialogue_resource = load("res://Dialogue Stuff (Dont Touch)/Book.dialogue")
 	DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
@@ -42,39 +37,17 @@ func run_is_over():
 	pass
 
 func check_hunger_timer():
-	Men.days_left_before_hungry -= 1
-	Woman.days_left_before_hungry -= 1
-	Boy.days_left_before_hungry -= 1
-	Girl.days_left_before_hungry -= 1
+	Global.days_before_hungry -= 1
 	
-	if Men.days_left_before_hungry <= 0:
-		Men.current_hp -= Men.current_damage_amount_hungry
-	if Woman.days_left_before_hungry <= 0:
-		Woman.current_hp -= Woman.current_damage_amount_hungry
-	if Boy.days_left_before_hungry <= 0:
-		Boy.current_hp -= Boy.current_damage_amount_hungry
-	if Girl.days_left_before_hungry <= 0:
-		Girl.current_hp -= Girl.current_damage_amount_hungry
+	if Global.days_before_hungry <= 0:
+		Global.health -= Men.current_damage_amount_hungry
+	if Global.days_before_hungry <= 0:
+		Global.health -= Woman.current_damage_amount_hungry
+	if Global.days_before_hungry <= 0:
+		Global.health -= Boy.current_damage_amount_hungry
+	if Global.days_before_hungry <= 0:
+		Global.health -= Girl.current_damage_amount_hungry
 
-func check_sikness():
-	if Men.is_currently_sick:
-		Men.current_hp -= Men.current_damage_amount_sick
-	if Woman.is_currently_sick:
-		Woman.current_hp -= Woman.current_damage_amount_sick
-	if Boy.is_currently_sick:
-		Woman.current_hp -= Woman.current_damage_amount_sick
-	if Girl.is_currently_sick:
-		Girl.current_hp -= Girl.current_damage_amount_sick
-
-func check_hurt():
-	if Men.is_currently_hurt:
-		Men.current_hp -= Men.current_damage_amount_hurt
-	if Woman.is_currently_hurt:
-		Woman.current_hp -= Woman.current_damage_amount_hurt
-	if Boy.is_currently_hurt:
-		Boy.current_hp -= Boy.current_damage_amount_hurt
-	if Girl.is_currently_hurt:
-		Girl.current_hp -= Girl.current_damage_amount_hurt
 
 func craft_spear():
 	if Global.stick >= 2 and Global.stone >= 1 and Global.rope >= 1:

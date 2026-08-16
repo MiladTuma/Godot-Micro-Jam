@@ -13,11 +13,6 @@ var current_damage_amount_hurt : int
 var current_damage_amount_hungry : int
 
 func _ready():
-	current_hp = stats.hp
-	is_currently_sick = stats.is_sick
-	is_currently_hurt = stats.is_hurt
-	days_left_before_hungry = stats.days_before_hungry
+	days_left_before_hungry = Global.days_before_hungry
 	
 	current_damage_amount_hungry = stats.damage_amount_hungry
-	current_damage_amount_hurt = stats.damage_amount_hurt
-	current_damage_amount_sick = stats.damage_amount_sick
