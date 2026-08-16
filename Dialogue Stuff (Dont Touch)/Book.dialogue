@@ -1,6 +1,9 @@
 ~ start
 Book: A new day has started.
-%19 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
+%3000000
+	Book: A caveman has come to trade with you. Do you want to?
+	=> trade
+%13 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
 % 
 	Book: You had to stay at home because of a storm.
 	=> END
@@ -8,6 +11,41 @@ Book: A new day has started.
 	Book: There is a sabretooth at your front door.
 	=> sabretooth
 	
+	~ trade
+	- don't trade
+		Book: The caveman goes disappointed away.
+		=> END
+	- trade
+	if Global.herbs >= 5
+		do Global.herbs -= 5
+		%
+			do Global.spear +=2
+			Book: You got 2 spears for 5 herbs
+			=> END
+		%
+			do Global.leather +=2
+			Book: You got 2 leather for 5 herbs
+			=> END
+		%
+			do Global.stone +=2
+			Book: You got 2 stones for 5 herbs
+			=> END
+		%
+			do Global.stick +=2
+			Book: You got 2 sticks for 5 herbs
+			=> END
+		%
+			do Global.rope +=2
+			Book: You got 2 ropes for 5 herbs
+			=> END
+		%
+			do Global.food +=2
+			Book: You got 2 food for 5 herbs
+			=> END
+	else
+		Book: You did not have enough herbs and angered the caveman. He hit you and ran away.
+		do Global.health -=5
+		=> END
 	
 	~ sabretooth
 	- Attack him with a Spear
@@ -108,7 +146,7 @@ Book: A new day has started.
 			Book: It ran away.
 			=> END
 			
-	- Dont chase it
+	- don't chase it
 		Book: It ran away.
 
 
