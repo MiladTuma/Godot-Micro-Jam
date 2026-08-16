@@ -8,7 +8,7 @@ func _ready() -> void:
 	pass
 
 func _process(_delta: float) -> void:
-
+	label.update_inventory()
 	if Global.is_run_over == true:
 		print("You lost")
 

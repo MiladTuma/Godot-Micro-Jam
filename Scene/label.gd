@@ -10,6 +10,5 @@ func _ready():
 
 func update_inventory():
 	text = ""
-
 	for item in items:
 		text += item.capitalize() + ": " + str(Global.get(item)) + "\n"
