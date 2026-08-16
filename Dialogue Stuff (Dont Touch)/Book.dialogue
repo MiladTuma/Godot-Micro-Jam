@@ -53,7 +53,7 @@ Book: A new day has started.
 			%
 				Book: You injured yourself, but got 6 leather and 12 food.
 				do Global.food += 12
-				do Global.leather += 8
+				do Global.leather += 6
 				do Global.spear -= 1
 				do Global.health -=15
 				=> END
