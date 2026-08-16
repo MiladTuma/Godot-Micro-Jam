@@ -90,18 +90,6 @@ offset_right = 172.0
 offset_bottom = 620.0
 text = "Craft Spear"
 
-[node name="NextDay" type="Button" parent="." unique_id=1040163772 node_paths=PackedStringArray("main")]
-offset_left = 891.0
-offset_top = 521.0
-offset_right = 1151.9998
-offset_bottom = 648.0
-theme_override_font_sizes/font_size = 30
-text = "Next day
-Day: 0"
-autowrap_mode = 3
-script = ExtResource("13_0sxm5")
-main = NodePath("..")
-
 [node name="Inventory" type="Node2D" parent="." unique_id=514695779]
 
 [node name="Toggle Inventory" type="Button" parent="Inventory" unique_id=810651209]
@@ -139,7 +127,6 @@ script = ExtResource("17_hiice")
 
 [node name="day_inf" type="Sprite2D" parent="book" unique_id=885571446]
 unique_name_in_owner = true
-visible = false
 position = Vector2(535, 319)
 texture = ExtResource("16_p2wc2")
 
@@ -202,11 +189,24 @@ offset_bottom = 449.0
 flat = true
 script = ExtResource("25_xw8bv")
 
+[node name="NextDay" type="Button" parent="book" unique_id=1040163772 node_paths=PackedStringArray("main")]
+unique_name_in_owner = true
+offset_left = 447.0
+offset_top = 49.0
+offset_right = 707.99976
+offset_bottom = 178.0
+theme_override_font_sizes/font_size = 30
+text = "Next day
+ Day: 0"
+autowrap_mode = 3
+script = ExtResource("13_0sxm5")
+main = NodePath("../..")
+
 [connection signal="button_down" from="Crafting/Craft Spear" to="." method="_on_button_button_down"]
-[connection signal="pressed" from="NextDay" to="NextDay" method="_on_pressed"]
 [connection signal="pressed" from="Inventory/Toggle Inventory" to="Inventory/InventoryUi" method="_on_toggle_inventory_pressed"]
 [connection signal="button_down" from="book/book_opening" to="book/book_opening" method="_on_button_down"]
 [connection signal="button_down" from="book/food_search_button" to="." method="_on_food_search_button_button_down"]
 [connection signal="button_down" from="book/food_change_button" to="." method="_on_food_change_button_button_down"]
 [connection signal="button_down" from="book/inventory_button" to="." method="_on_inventory_button_button_down"]
 [connection signal="button_down" from="book/day_info_button" to="." method="_on_day_info_button_button_down"]
+[connection signal="pressed" from="book/NextDay" to="book/NextDay" method="_on_pressed"]

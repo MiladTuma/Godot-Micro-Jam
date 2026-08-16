@@ -91,7 +91,8 @@ func _on_food_search_button_button_down() -> void:
 	%inventory.visible = false 
 	%food.visible = false
 	%search_for_food.visible = true
-		
+	
+	%NextDay.visible = false
 
 
 func _on_food_change_button_button_down() -> void:
@@ -99,6 +100,8 @@ func _on_food_change_button_button_down() -> void:
 	%inventory.visible = false 
 	%food.visible = true
 	%search_for_food.visible = false
+	
+	%NextDay.visible = false
 
 
 func _on_inventory_button_button_down() -> void:
@@ -106,6 +109,8 @@ func _on_inventory_button_button_down() -> void:
 	%inventory.visible = true
 	%food.visible = false
 	%search_for_food.visible = false
+	
+	%NextDay.visible = false
 
 
 func _on_day_info_button_button_down() -> void:
@@ -113,3 +118,5 @@ func _on_day_info_button_button_down() -> void:
 	%inventory.visible = false 
 	%food.visible = false
 	%search_for_food.visible = false
+	
+	%NextDay.visible = true
