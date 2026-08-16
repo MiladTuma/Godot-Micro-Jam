@@ -14,3 +14,5 @@ signal inventory_changed
 @export var stone : int = 4
 
 @export var is_run_over : bool = false
+@export var days_before_hungry : int = 2
+@export var health : int = 100

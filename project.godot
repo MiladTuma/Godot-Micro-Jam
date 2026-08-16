@@ -20,6 +20,10 @@ config/icon="res://Assets/icon.svg"
 DialogueManager="*uid://c3rodes2l3gxb"
 Global="*uid://oubhk86ly8t5"
 
+[dialogue_manager]
+
+runtime/balloon_path="res://Dialogue Stuff (Dont Touch)/balloon.tscn"
+
 [display]
 
 window/stretch/mode="canvas_items"
