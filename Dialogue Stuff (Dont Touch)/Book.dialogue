@@ -9,10 +9,6 @@ Book: A new day has started.
 	=> sabretooth
 	
 	
-	
-	
-	
-	
 	~ sabretooth
 	- Attack him with a Spear
 	if Global.spear >= 1

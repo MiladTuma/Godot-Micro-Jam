@@ -189,11 +189,12 @@ position = Vector2(535, 319)
 texture = ExtResource("18_p4j74")
 
 [node name="Button" type="Button" parent="book/food" unique_id=275925076]
-offset_left = -56.0
-offset_top = 125.0
-offset_right = 134.0
-offset_bottom = 210.0
-text = "Feed the Family 4 Food."
+offset_left = -142.0
+offset_top = 84.0
+offset_right = 236.0
+offset_bottom = 233.0
+theme_override_font_sizes/font_size = 25
+text = "Eat 4 Meat to reset to 3 Days."
 script = ExtResource("17_hiice")
 
 [node name="Label" type="Label" parent="book/food" unique_id=1877935228]
