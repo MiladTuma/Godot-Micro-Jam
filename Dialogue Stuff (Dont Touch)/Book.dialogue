@@ -30,29 +30,94 @@ Book: A new day has started.
 		=> END
 
 - hunting expedition
-	Book: You found a mammoth
-	
+	%
+		Book: You found a mammoth. 
+		=> mammoth
+	%
+		Book: You found a hog. 
+		=> hog
+	%
+		Book: You found a vulture. 
+		=> vulture
+		
+		
+	~ mammoth
 	- Chase it
 		if Global.spear >= 1
 			%
-				Book: You got 20 Meat and 10 leather.
-				do Global.meat += 20
-				do Global.leather += 10
+				Book: You got 12 food and 6 leather.
+				do Global.food += 12
+				do Global.leather += 6
 				do Global.spear -= 1
 				=> END
 			%
-				Book: You injured yourself, but got 10 leather and 20 Meat.
-				do Global.meat += 20
-				do Global.leather += 10
+				Book: You injured yourself, but got 6 leather and 12 food.
+				do Global.food += 12
+				do Global.leather += 8
 				do Global.spear -= 1
+				do Global.health -=15
 				=> END
 		else
 			Book: You did not have a spear.
 			Book: It ran away.
 			=> END
-			# do injure
+			
 	- Dont chase it
 		Book: It ran away.
+		
+		
+	~ hog
+	- Chase it
+		if Global.spear >= 1
+			%
+				Book: You got 8 food and 4 leather.
+				do Global.food += 8
+				do Global.leather += 4
+				do Global.spear -= 1
+				=> END
+			%
+				Book: You injured yourself, but got 4 leather and 8 food.
+				do Global.food += 8
+				do Global.leather += 4
+				do Global.spear -= 1
+				do Global.health -=15
+				=> END
+		else
+			Book: You did not have a spear.
+			Book: It ran away.
+			=> END
+			
+	- Dont chase it
+		Book: It ran away.
+		
+		
+	~ vulture
+	- Chase it
+		if Global.spear >= 1
+			%
+				Book: You got 4 food and 2 leather.
+				do Global.food += 4
+				do Global.leather += 2
+				do Global.spear -= 1
+				=> END
+			%
+				Book: You injured yourself, but got 2 leather and 4 food.
+				do Global.food += 4
+				do Global.leather += 2
+				do Global.spear -= 1
+				do Global.health -=15
+				=> END
+		else
+			Book: You did not have a spear.
+			Book: It ran away.
+			=> END
+			
+	- Dont chase it
+		Book: It ran away.
+
+
+
+
 
 
 
@@ -78,7 +143,7 @@ Book: A new day has started.
 	- take them
 		%4 
 			Book: You took the berries.
-			do Global.berries += 10
+			do Global.food += 2
 		% Book: You took the berries, but you got injured in the process. 
 		
 	- let them be
@@ -90,7 +155,7 @@ Book: A new day has started.
 	- take them
 		%4 
 			Book: You took the herbs.
-			do Global.herbs += 3
+			do Global.herbs += 4
 		% Book: You took the herbs, but you got injured in the process. 
 		
 	- let them be

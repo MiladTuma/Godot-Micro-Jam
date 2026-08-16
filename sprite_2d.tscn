@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bwewribp65ll7"]
+[gd_scene format=3 uid="uid://ci0wh1k0yn7t5"]
 
 [node name="Sprite2D" type="Sprite2D" unique_id=162587746]
 position = Vector2(471.28604, 256.55942)
