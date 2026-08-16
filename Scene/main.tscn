@@ -155,6 +155,7 @@ script = ExtResource("20_aam5o")
 
 [node name="search_for_food" type="Sprite2D" parent="book" unique_id=1247902677]
 unique_name_in_owner = true
+visible = false
 position = Vector2(535, 319)
 texture = ExtResource("19_hiice")
 
