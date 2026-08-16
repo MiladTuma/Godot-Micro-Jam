@@ -12,3 +12,5 @@ signal inventory_changed
 @export var rope : int = 1
 @export var stick : int = 2
 @export var stone : int = 4
+
+@export var is_run_over : bool = false

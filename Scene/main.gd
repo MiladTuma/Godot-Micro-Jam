@@ -12,6 +12,8 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	update_inventory()
+	if Global.is_run_over == true:
+		print("You lost")
 
 func new_day():
 	check_hunger_timer()
@@ -29,6 +31,11 @@ func new_day():
 	
 	var dialogue_resource = load("res://Dialogue Stuff (Dont Touch)/Book.dialogue")
 	DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
+	
+	if Men.visible == false and Woman.visible == false and Boy.visible == false and Girl.visible == false:
+		Global.is_run_over = true
+		
+	run_is_over()
 
 
 
@@ -84,3 +91,7 @@ func _on_button_button_down() -> void:
 
 func update_inventory():
 	label.update_inventory()
+
+func run_is_over():
+	# reset
+	pass
