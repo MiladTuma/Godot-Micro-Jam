@@ -3,9 +3,6 @@ extends Node2D
 @export var label : Label
 
 @export var Men : Node2D
-@export var Woman : Node2D
-@export var Boy : Node2D
-@export var Girl : Node2D
 
 func _ready() -> void:
 	pass
@@ -21,35 +18,44 @@ func new_day():
 	
 	if Global.health <= 0:
 		Men.visible = false
-		Girl.visible = false
-		Woman.visible = false
-		Boy.visible = false
 	Global.health += 5
 	if Global.health > 100:
 		Global.health = 100
 	var dialogue_resource = load("res://Dialogue Stuff (Dont Touch)/Book.dialogue")
 	DialogueManager.show_dialogue_balloon(dialogue_resource, "start")
 	
-	if Men.visible == false and Woman.visible == false and Boy.visible == false and Girl.visible == false:
+	if Men.visible == false:
 		Global.is_run_over = true
 		
 	run_is_over()
 
 
 func run_is_over():
-	pass
+	if Global.health <= 0:
+		# Reset resources
+		Global.food = 8
+		Global.water = 5
+		Global.herbs = 0
+		Global.spear = 3
+		Global.leather = 0
+		Global.rope = 1
+		Global.stick = 2
+		Global.stone = 4
+		
+		# Reset status variables
+		Global.is_run_over = false
+		Global.days_before_hungry = 3
+		Global.health = 100
+		
+		
+		
+		get_tree().reload_current_scene()
 
 func check_hunger_timer():
 	Global.days_before_hungry -= 1
 	
 	if Global.days_before_hungry <= 0:
 		Global.health -= Men.current_damage_amount_hungry
-	if Global.days_before_hungry <= 0:
-		Global.health -= Woman.current_damage_amount_hungry
-	if Global.days_before_hungry <= 0:
-		Global.health -= Boy.current_damage_amount_hungry
-	if Global.days_before_hungry <= 0:
-		Global.health -= Girl.current_damage_amount_hungry
 
 
 func craft_spear():
