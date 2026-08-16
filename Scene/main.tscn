@@ -208,6 +208,7 @@ script = ExtResource("25_xw8bv")
 [connection signal="button_down" from="Crafting/Craft Spear" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="book/book_opening" to="book/book_opening" method="_on_button_down"]
 [connection signal="pressed" from="book/book_opening" to="book" method="_on_book_opening_pressed"]
+[connection signal="pressed" from="book/book_opening" to="book/food/Button" method="_on_book_opening_pressed"]
 [connection signal="pressed" from="book/day_inf/NextDay" to="book/day_inf/NextDay" method="_on_pressed"]
 [connection signal="button_down" from="book/food/Button" to="book/food/Button" method="_on_button_down"]
 [connection signal="button_down" from="book/food_search_button" to="." method="_on_food_search_button_button_down"]
