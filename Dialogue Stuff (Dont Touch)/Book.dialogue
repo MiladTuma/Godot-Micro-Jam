@@ -1,9 +1,20 @@
 ~ start
-Book: A new day has started. 
+Book: A new day has started.
 %19 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
 % 
 	Book: You had to stay at home because of a storm.
 	=> END
+%30 
+	Book: There is a sabretooth at your front door.
+	- Attack him with a Spear
+	if Global.spear >= 1
+		Book: You made him run away lol. Your Spear broke.
+		do Global.spear -= 1
+		=> END
+	else
+		Book: You dont have a Spear noob. You died RIP
+		=> END
+
 - hunting expedition
 	Book: You found a mammoth
 	
@@ -16,8 +27,10 @@ Book: A new day has started.
 			Book: You took 10 Damage, 10 leather and 20 Meat.
 			do Global.meat += 20
 			do Global.leather += 10
+			# do damage
 		%
 			Book: You took 10 Damage and the mammoth ran away.
+			# do 10 damage
 	- Dont chase it
 		Book: It ran away.
 
