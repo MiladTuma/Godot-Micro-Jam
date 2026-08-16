@@ -1,9 +1,6 @@
 ~ start
 Book: A new day has started.
 %
-	A mysterious caveman came to you and made an intriguing offer. if you give him a herb, he might give you 5 back, but his trustworthyness is debatable. Do you accept the deal?
-	=> gambling
-%
 	Book: A horrible blizzard has started. Do you use a piece of leather to cover yourself?
 	=> blizzard
 %
@@ -12,32 +9,13 @@ Book: A new day has started.
 %3
 	Book: A caveman has come to trade with you. He offers  2 mystery items for 5 herbs. Do you want to?
 	=> trade
-%20 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
+%12 Book: You get the choice to send somebody on an expedition. Which kind of expedition do you want to do?
 % 
 	Book: You had to stay at home because of a storm.
 	=> END
 %3
 	Book: There is a sabretooth at your front door.
 	=> sabretooth
-	
-	~ gambling
-	- don't take the deal
-		Book: The caveman leaves without saying anything.
-		=> END
-	- take the deal
-	if Global.herbs >=1
-		%
-			do Global.herbs +=4
-			Book: You give him a herb and he gives 5 back.
-			=> END
-		%4
-			do Global.herbs -=1
-			Book: You give him the herb, look away for a short moment and he disappears.
-			=> END
-	else
-		Book: The caveman sighs and leaves.
-		=> END
-	
 	~ blizzard
 	- don't use it
 		Book: You shiver through the entire storm, which leads in you getting sick and losing 20 health.
