@@ -3,7 +3,7 @@ extends Label
 
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var hello = Global.days_before_hungry
 	if hello < 0:
 		hello = 0
