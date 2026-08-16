@@ -97,6 +97,7 @@ main = NodePath("../../..")
 
 [node name="inventory" type="Sprite2D" parent="book" unique_id=771375147]
 unique_name_in_owner = true
+visible = false
 position = Vector2(535, 319)
 texture = ExtResource("17_jbas8")
 
